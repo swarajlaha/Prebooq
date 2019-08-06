@@ -271,6 +271,14 @@ body {
   .overview__rating-count {
     font-size: 1.25rem;
     text-transform: uppercase; }
+  .overview__rating-count::before {
+    content: "";
+    display: inline-flex;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 7px;
+    background-image: url(../img/thumbs-up.svg);
+    fill: var(--color-white); }
 
 .btn-inline {
   border: none;
