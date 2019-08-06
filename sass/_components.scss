@@ -226,8 +226,9 @@
         height: 2rem;
         width: 2rem;
         margin-right: 7px;
-        background-image: url(../img/thumbs-up.svg);
-        fill: var(--color-white);
+        background-color: var(--color-white);
+        -webkit-mask-image: url(../img/thumbs-up.svg);
+        -webkit-mask-size: cover;
     }
 }
 
@@ -290,6 +291,11 @@
         height: 2rem;
         width: 2rem;
         margin-right: 7px;
-        background-image: url(../img/chevron-thin-right.svg);
+        // Older browsers.
+        //background-image: url(../img/chevron-thin-right.svg);       // Doesn't allow to change background color.
+        // Newer method - mask.
+        background-color: var(--color-primary); // Allows to see through the background image.
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
     }
 }
