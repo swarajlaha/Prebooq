@@ -288,8 +288,8 @@
     &__item::before {
         content: "";
         display: inline-block;
-        height: 2rem;
-        width: 2rem;
+        height: 1rem;
+        width: 1rem;
         margin-right: .7px;
         // For older browsers.
         //background-image: url(../img/chevron-thin-right.svg);       // This technique doesn't allow to change bacjground colors.
@@ -297,5 +297,30 @@
         background-color: var(--color-primary); // Helps to see through the objects.
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size: cover;
+        // For non webkit browsers.
+        mask-image: url(../img/chevron-thin-right.svg);
+        mask-size: cover;
     }
+}
+
+// RECOMMEND
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid var(--color-white);
+        &:not(:last-child) {
+            margin-right: -1.5rem;
+        }
+    }
+    &__count {
+        margin-right: auto;
+    }
+    &__friends {}
 }
