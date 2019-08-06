@@ -25,7 +25,8 @@ Grey dark 3: #999
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
   --color-white: #fff;
-  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .9); }
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .9);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06); }
 
 * {
   margin: 0;
@@ -77,12 +78,32 @@ body {
   justify-content: space-between; }
 
 .hotel-view {
-  flex: 1;
-  height: 80rem; }
+  flex: 1; }
+
+.detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: 1px solid var(--color-grey-light-2); }
+
+.description {
+  font-size: 1.4rem;
+  background-color: var(--color-white);
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  box-shadow: var(--shadow-light);
+  padding: 3rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
+  flex: 1; }
 
 .logo {
   height: 3.25rem;
   margin-left: 3rem; }
+  .logo:hover {
+    outline: none;
+    animation: pulsate 1s; }
 
 .search {
   background-color: var(--color-white);
@@ -233,12 +254,22 @@ body {
   .overview__rating {
     background-color: var(--color-primary);
     margin-left: 3rem;
-    color: var(--color-white); }
+    padding: 0 2.25rem;
+    color: var(--color-white);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .overview__rating:hover {
+      outline: none;
+      animation: pulsate 1.5s infinite; }
   .overview__rating-average {
-    font-size: 2.25rem;
-    font-weight: 300; }
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: -3px; }
   .overview__rating-count {
-    font-size: .8rem;
+    font-size: 1.25rem;
     text-transform: uppercase; }
 
 .btn-inline {
@@ -246,7 +277,7 @@ body {
   color: var(--color-primary);
   font-size: inherit;
   border-bottom: 1px solid currentColor;
-  padding-bottom: 2px;
+  padding: 2px;
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
@@ -259,11 +290,33 @@ body {
 
 @keyframes pulsate {
   0% {
-    transform: scale(1);
-    box-shadow: none; }
-  50% {
     transform: scale(1.05);
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); }
+  50% {
+    transform: scale(1);
+    box-shadow: none; }
   100% {
     transform: scale(1.05);
-    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25); } }
+    box-shadow: none; } }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem;
+  border-top: 1px solid var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 7px;
+    background-image: url(../img/chevron-thin-right.svg); }
