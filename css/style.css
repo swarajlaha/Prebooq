@@ -277,8 +277,9 @@ body {
     height: 2rem;
     width: 2rem;
     margin-right: 7px;
-    background-image: url(../img/thumbs-up.svg);
-    fill: var(--color-white); }
+    background-color: var(--color-white);
+    -webkit-mask-image: url(../img/thumbs-up.svg);
+    -webkit-mask-size: cover; }
 
 .btn-inline {
   border: none;
@@ -327,4 +328,6 @@ body {
     height: 2rem;
     width: 2rem;
     margin-right: 7px;
-    background-image: url(../img/chevron-thin-right.svg); }
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover; }
