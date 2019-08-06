@@ -313,3 +313,10 @@ body {
   .list__item {
     flex: 0 0 50%;
     margin-bottom: .7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 7px;
+    background-image: url(../img/chevron-thin-right.svg); }
