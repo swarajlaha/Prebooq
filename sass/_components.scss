@@ -280,7 +280,12 @@
         display: inline-block;
         height: 2rem;
         width: 2rem;
-        margin-right: 7px;
-        background-image: url(../img/chevron-thin-right.svg);
+        margin-right: .7px;
+        // For older browsers.
+        //background-image: url(../img/chevron-thin-right.svg);       // This technique doesn't allow to change bacjground colors.
+        // For newer browsers - masks
+        background-color: var(--color-primary); // Helps to see through the objects.
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
     }
 }
