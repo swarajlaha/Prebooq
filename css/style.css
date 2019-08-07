@@ -98,8 +98,8 @@ body {
   flex: 1; }
 
 .logo {
-  height: 3.25rem;
-  margin-left: 3rem; }
+  height: 4.25rem;
+  margin-left: 3.5rem; }
   .logo:hover {
     outline: none;
     animation: pulsate 1s; }
