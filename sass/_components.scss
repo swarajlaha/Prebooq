@@ -1,5 +1,8 @@
 // LOGO
 .logo {
+    background-color: var(--color-primary);
+    -webkit-mask-image: href="../img/logo.png";
+    -webkit-mask-size: cover;
     height: 3.25rem;
     margin-left: 3rem;
     &:hover {
